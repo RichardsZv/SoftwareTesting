@@ -1,7 +1,7 @@
 Feature: Oracle Login test
 
 Scenario Outline: Invalid login with user
-  Given User has opened Oracle Profale page
+  Given User has opened Oracle Profile page
   When User inputs <email> as the email
   And User inputs <password> as the password
   And User presses sign in button
