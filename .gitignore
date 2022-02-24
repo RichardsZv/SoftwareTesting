@@ -11,3 +11,4 @@ allure-results/**/*.xml
 /.idea
 .vscode
 *.iml
+/js_intro
