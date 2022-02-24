@@ -1,3 +1,4 @@
+/js_intro
 *.xml
 *.html
 *.png
@@ -11,4 +12,3 @@ allure-results/**/*.xml
 /.idea
 .vscode
 *.iml
-/js_intro
