@@ -1,4 +1,4 @@
-js_intro/
+../js_intro/
 *.xml
 *.html
 *.png
@@ -7,7 +7,7 @@ js_intro/
 *.log
 .DS_Store
 allure-report/
-node_modules/
+../node_modules/
 allure-results/**/*.xml
 /.idea
 .vscode
