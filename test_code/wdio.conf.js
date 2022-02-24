@@ -21,7 +21,7 @@ exports.config = {
     // will be called from there.
     //
     specs: [
-        './features/**/*.feature'
+        './features/**/signup.feature'
     ],
     // Patterns to exclude.
     exclude: [
@@ -133,7 +133,13 @@ exports.config = {
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
     reporters: ['spec'],
-
+    /*
+    reporters: [['allure', {
+        outputDir: 'allure-results',
+        disableWebdriverStepsReporting: true,
+        useCucumberStepReporter: true
+    }]],
+    */
 
     //
     // If you are using Cucumber you need to specify the location of your step definitions.
@@ -251,8 +257,11 @@ exports.config = {
      * @param {number}             result.duration  duration of scenario in milliseconds
      * @param {Object}             context          Cucumber World object
      */
-    // afterStep: function (step, scenario, result, context) {
-    // },
+    afterStep: function (test, context, { error, result, duration, passed, retries }) {
+        if (error) {
+            browser.takeScreenshot();
+        }
+    }, 
     /**
      *
      * Runs after a Cucumber Scenario.

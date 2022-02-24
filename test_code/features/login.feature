@@ -10,5 +10,5 @@ Scenario Outline: Invalid login with user
   Examples:
     | email                 | password  |
     | dsagfghjkas@gmail.com | 124123521 |
-    | gdsageasghj@gmail.com | 21423155  |
-    | gdsags@gmail.com      | 21423     |
+    #| gdsageasghj@gmail.com | 21423155  |
+    #| gdsags@gmail.com      | 21423     |

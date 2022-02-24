@@ -1,8 +1,12 @@
-import {BasePage} from '../pageobjects/basePage'
+import {BasePage} from '../pageobjects/basePage';
+import {CreateAccountPage} from "../pageobjects/createAccountPage";
+import {CheckEmailPage} from '../pageobjects/checkEmailPage'
 
 class Pages{
     constructor(){
-        this.basePage = new BasePage();//we assign bas page
+        this.basePage = new BasePage();//we assign base page
+        this.createAccountPage = new CreateAccountPage();
+        this.checkEmailPage = new CheckEmailPage();
     }
 }
 

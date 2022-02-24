@@ -9,4 +9,16 @@ export class NavigationTest {
     async pressSignInButton(){
         await pages.basePage.getSignInButton().click();
     }
+
+    //for signup
+    async pressCreateAccountButton(){
+        await pages.basePage.getCreateAccountButton().click()
+        await browser.switchWindow("Oracle | Create Account");
+    }
+
+    async pressSignUpButton(){
+        await pages.createAccountPage.getSignupButton().click();
+        await browser.pause(4000);
+    }
+
 }
