@@ -10,7 +10,11 @@ export class LoginTest {
     }
 
     async assertInvalidCardentialsMsg(){
-        await pages.basePage.getInvalidCredentialsMsg().waitForDisplayed({timeout: 5000});
-        await expect(pages.basePage.getInvalidCredentialsMsg()).toHaveText("Invalid username and/or password.");
+        await pages.basePage.getInvalidCredentialsMsg()
+        .waitForDisplayed({timeout: 5000});
+        await expect(await pages.basePage.getInvalidCredentialsMsg()).toHaveText("Invalid username and/or password.");
+        //const score = await browser.getPerformanceScore();
+        //console.log(`THE SCORE IS ${score}`);
     }
+
 }
